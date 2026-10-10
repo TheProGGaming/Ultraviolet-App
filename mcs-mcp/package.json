@@ -1,0 +1,22 @@
+{
+  "name": "mcs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server giving Claude/ChatGPT context on Maximum Card Show data from Treasure and Eventeny exports",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "mcs-mcp": "server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "http": "node server.js --http",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.5"
+  }
+}

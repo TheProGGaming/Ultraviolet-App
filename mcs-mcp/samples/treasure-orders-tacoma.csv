@@ -1,0 +1,8 @@
+Order ID,Date,Item,Qty,Total,Fees,Status,Customer,Email
+T-1001,2026-07-01,Vendor Table (8ft),2,$300.00,$9.00,Paid,PNW Slabs,pnwslabs@example.com
+T-1002,2026-07-03,Vendor Table (8ft),1,$150.00,$4.50,Paid,Rain City Cards,rain@example.com
+T-1003,2026-07-20,Vendor Table (8ft),3,$450.00,$13.50,Paid,Cascade Collectibles,casc@example.com
+T-1004,2026-08-02,Vendor Table (8ft),1,$150.00,$4.50,Refunded,Dropped Dealer,drop@example.com
+T-1005,2026-08-10,General Admission,4,$40.00,$3.20,Paid,Alex P,alex@example.com
+T-1006,2026-08-11,Early Entry VIP,2,$50.00,$3.00,Paid,Sam R,sam@example.com
+T-1007,2026-08-12,General Admission,10,$100.00,$6.00,Paid,Jordan K,jk@example.com
