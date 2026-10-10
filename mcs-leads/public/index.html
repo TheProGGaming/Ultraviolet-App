@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCS Lead Finder</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>MCS <span>Lead Finder</span></h1>
+  <nav id="tabs">
+    <button data-tab="discover" class="on">Discover</button>
+    <button data-tab="pipeline">Pipeline <b id="count"></b></button>
+    <button data-tab="settings">Instagram</button>
+  </nav>
+  <span id="mode" class="pill"></span>
+</header>
+<div id="banner" hidden></div>
+
+<main>
+  <section id="discover">
+    <div class="cards">
+      <form id="f-hashtag" class="card">
+        <h3>Hashtag browse</h3>
+        <p class="hint">Find posts: <code>#cardshow</code> <code>#sportscardsforsale</code> <code>#pokemoncards</code> + a city. Authors aren't exposed by Instagram, but @mentions in captions are.</p>
+        <div class="row"><input name="tag" placeholder="#seattlecardshow" required>
+          <select name="kind"><option value="recent">Recent</option><option value="top">Top</option></select>
+          <button>Search</button></div>
+        <p class="hint" id="quota"></p>
+      </form>
+      <form id="f-profile" class="card">
+        <h3>Profile lookup</h3>
+        <p class="hint">Read any Business/Creator account's bio, followers, and recent posts, scored for fit.</p>
+        <div class="row"><input name="username" placeholder="@username" required><button>Look up</button></div>
+      </form>
+      <div class="card">
+        <h3>Inbound</h3>
+        <p class="hint">Warmest leads: people who already tagged or commented on MCS.</p>
+        <div class="row"><button id="b-tagged" class="alt">Tagged us</button><button id="b-comments" class="alt">Commenters</button></div>
+      </div>
+    </div>
+    <div id="results"></div>
+  </section>
+
+  <section id="pipeline" hidden>
+    <div class="toolbar">
+      <input id="filter" placeholder="Filter by name, bio, market…">
+      <select id="f-status"><option value="">All statuses</option></select>
+      <select id="f-type"><option value="">All types</option><option>vendor</option><option>attendee</option><option>sponsor</option><option>unknown</option></select>
+      <a class="btn alt" href="/api/leads.csv">Export CSV</a>
+    </div>
+    <details class="card"><summary>Add a lead manually (private / non-business accounts)</summary>
+      <form id="f-manual" class="row" style="margin-top:.6rem">
+        <input name="username" placeholder="@username" required>
+        <input name="bio" placeholder="Bio or what you saw (optional, used for scoring)">
+        <input name="notes" placeholder="Notes"><button>Add</button></form>
+    </details>
+    <div id="leads"></div>
+  </section>
+
+  <section id="settings" hidden>
+    <div class="card"><h3>Connection</h3><div id="conn"></div></div>
+    <div class="card"><h3>Outreach templates</h3>
+      <p class="hint">Copy, personalize, and send by hand from the MCS account. Automated DMs are the fastest way to get an Instagram account restricted, so this app deliberately doesn't send.</p>
+      <div id="templates"></div></div>
+  </section>
+</main>
+<script src="app.js" type="module"></script>
+</body>
+</html>

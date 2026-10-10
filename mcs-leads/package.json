@@ -1,0 +1,12 @@
+{
+  "name": "mcs-leads",
+  "version": "1.0.0",
+  "description": "Instagram lead finder for Maximum Card Show (official Graph API, zero dependencies)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
